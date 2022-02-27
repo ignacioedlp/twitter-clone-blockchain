@@ -8,9 +8,9 @@ import {
 
 const style = {
   wrapper:
-    'flex  h-screen w-screen select-none bg-[#15202b] text-white flex-col justify-center py-2',
-  content: ' flex justify-between h-full',
-  mainContent: `flex-[2] border-r border-l border-[#38444d] overflow-y-hidden`,
+    'flex  h-screen w-screen select-none bg-[#15202b] text-white  justify-center py-2',
+  content: ' flex flex-col md:flex-row justify-between h-screen bg-[#15202b]',
+  mainContent: `flex-[2] border-r border-l border-[#38444d] bg-[#15202b] `,
 }
 
 function Profile() {
@@ -20,7 +20,7 @@ function Profile() {
         <Sidebar />
         <div className={style.mainContent}>
           <ProfileHeader />
-          <ProfileTweets/>
+          <ProfileTweets />
         </div>
         <Widgets />
       </div>

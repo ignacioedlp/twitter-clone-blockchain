@@ -24,7 +24,7 @@ import SidebarOptions from './SidebarOptions'
 
 //styles
 const style = {
-  wrapper: `flex-[0.7] px-8 flex flex-col`,
+  wrapper: `flex-[0.7] px-8 flex flex-col bg-[#15202b] md:my-0 my-2`,
   twitterIconContainer: `text-3xl m-4`,
   tweetButton: `bg-[#1d9bf0] hover:bg-[#1b8cd8] flex items-center justify-center font-bold rounded-3xl h-[50px] mt-[20px] cursor-pointer`,
   navContainer: `flex-1`,

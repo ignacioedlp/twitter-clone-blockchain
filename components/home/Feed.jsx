@@ -6,14 +6,14 @@ import Post from './Post'
 import { TwitterContext } from '../../context/TwitterContext'
 
 const style = {
-  wrapper: `flex-[2] border-r border-l border-[#38444d] `,
+  wrapper: `flex-[2] md:border-r md:border-l border-[#38444d] bg-[#15202b] md:my-0 my-2`,
   header: `sticky top-0 bg-[#15202b] z-10 p-4 flex justify-between items-center`,
   headerTitle: `text-xl font-bold`,
 }
 
 function Feed() {
   const { tweets, currentAccount } = useContext(TwitterContext)
-  console.log(tweets)
+
   return (
     <div className={style.wrapper}>
       <div className={style.header}>
