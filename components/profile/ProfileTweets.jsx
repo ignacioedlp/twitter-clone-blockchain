@@ -3,7 +3,7 @@ import Post from '../home/Post'
 import { TwitterContext } from '../../context/TwitterContext'
 
 const style = {
-  wrapper: `no-scrollbar overflow-y-hidden`,
+  wrapper: `max-h-[500px] w-full overflow-auto scrollbar-hide`,
   header: `sticky top-0 bg-[#15202b] z-10 p-4 flex justify-between items-center`,
   headerTitle: `text-xl font-bold`,
 }

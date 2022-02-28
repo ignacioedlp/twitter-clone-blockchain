@@ -99,6 +99,8 @@ export const TwitterProvider = ({ children }) => {
       *[_type == "tweets"]{
         "author": author ->{name, walletAddress, profileImage, isProfileImageNft},
         "tweet": tweet,
+        "likes": likes,
+        "id": _id,
         "timestamp": timestamp
       }|order(timestamp desc)
     `
@@ -115,6 +117,8 @@ export const TwitterProvider = ({ children }) => {
       let newItem = {
         tweet: item.tweet,
         timestamp: item.timestamp,
+        likes: item.likes,
+        id: item.id,
         author: {
           name: item.author.name,
           walletAddress: item.author.walletAddress,
