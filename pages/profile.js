@@ -6,6 +6,8 @@ import {
   ProfileHeader,
 } from '../components/index'
 
+import Head from 'next/head'
+
 const style = {
   wrapper:
     'flex  h-screen w-screen select-none bg-[#15202b] text-white  justify-center py-2',
@@ -15,16 +17,22 @@ const style = {
 
 function Profile() {
   return (
-    <div className={style.wrapper}>
-      <div className={style.content}>
-        <Sidebar />
-        <div className={style.mainContent}>
-          <ProfileHeader />
-          <ProfileTweets />
+    <div>
+      <Head>
+         <title>Twitter clone</title>
+         <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={style.wrapper}>
+        <div className={style.content}>
+          <Sidebar />
+          <div className={style.mainContent}>
+            <ProfileHeader />
+            <ProfileTweets />
+          </div>
+          <Widgets />
         </div>
-        <Widgets />
-      </div>
-    </div>
+      </main>
+</div>
   )
 }
 
