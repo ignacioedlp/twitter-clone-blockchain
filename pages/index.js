@@ -2,6 +2,7 @@ import { Sidebar, Feed, Widgets, Menu } from '../components/index'
 import { TwitterContext } from '../context/TwitterContext'
 import { useContext } from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 import metamaskLogo from '../assets/metamask.png'
 import errorLogo from '../assets/error.png'
 
@@ -84,7 +85,17 @@ const Home = () => {
     </div>
   )
 
-  return <div className={style.wrapper}>{app(appStatus)}</div>
+  return (
+    <div>
+    <Head>
+        <title>Twitter clone</title>
+        <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <main  className={style.wrapper}>
+      {app(appStatus)}
+    </main>
+   </div>
+ )
 }
 
 export default Home
